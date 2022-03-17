@@ -144,7 +144,6 @@ public class VishnuDAO implements VishnuDAOInterface {
 		return ll;
 	}
 
-	@Override
 	public List<VishnuUser> searchProfileDAO(VishnuUser vu) {
 
 		VishnuUser v = null;
@@ -181,6 +180,32 @@ public class VishnuDAO implements VishnuDAOInterface {
 		}
 		
 		return ll;
+	}
+
+	
+	
+	public int editProfileDAO(VishnuUser vu) {
+
+		int i = 0;
+		
+		try {
+			
+			PreparedStatement ps = con.prepareStatement("update VishnuUser set name=?, password=?, address=? where email=?");
+			ps.setString(1, vu.getName());
+			ps.setString(2, vu.getPassword());
+			ps.setString(4, vu.getEmail());
+			ps.setString(3, vu.getAddress());
+			
+			i = ps.executeUpdate();
+			
+		}
+		
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return i;
+		
 	}
 
 }

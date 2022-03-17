@@ -16,4 +16,6 @@ public interface VishnuServiceInterface {
 
 	List<VishnuUser> searchProfileService(VishnuUser vu);
 
+	int editProfileService(VishnuUser vu);
+
 }

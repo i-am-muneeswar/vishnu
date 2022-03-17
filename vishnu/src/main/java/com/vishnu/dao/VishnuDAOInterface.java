@@ -16,4 +16,6 @@ public interface VishnuDAOInterface {
 
 	List<VishnuUser> searchProfileDAO(VishnuUser vu);
 
+	int editProfileDAO(VishnuUser vu);
+
 }

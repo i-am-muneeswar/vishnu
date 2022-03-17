@@ -12,6 +12,6 @@ public interface VishnuControllerInterface {
 
 	void searchProfileController();
 
-	void editController();
+	void editProfileController();
 
 }

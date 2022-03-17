@@ -130,7 +130,7 @@ public class VishnuController implements VishnuControllerInterface {
 		
 	}
 
-	@Override
+	
 	public void searchProfileController() {
 
 		Scanner sc = new Scanner(System.in);
@@ -166,9 +166,42 @@ public class VishnuController implements VishnuControllerInterface {
 		
 	}
 
-	@Override
-	public void editController() {
-		// TODO Auto-generated method stub
+	public void editProfileController() {
+
+		System.out.println("Your Older Data");
+		viewProfileController();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter new Name: ");
+		String name = sc.next();
+		
+		System.out.println("Enter new Password: ");
+		String password = sc.next();
+		
+		System.out.println("Enter old Email: ");
+		String email = sc.next();
+		
+		System.out.println("Enter new Address: ");
+		String address = sc.next();
+		
+		VishnuUser vu = new VishnuUser();
+		vu.setName(name);
+		vu.setPassword(password);
+		vu.setEmail(email);
+		vu.setAddress(address);
+		
+		int i = vs.editProfileService(vu);
+		
+		if(i>0) {
+			System.out.println("Your Profile is edited "+name);
+		}
+		
+		else {
+			System.out.println("Sorry..... Your Profile is not edited");
+		}
+		
+		
 		
 	}
 

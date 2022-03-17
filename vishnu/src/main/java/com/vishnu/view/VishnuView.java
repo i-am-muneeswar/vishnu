@@ -18,7 +18,6 @@ public class VishnuView {
 			System.out.println("********************");
 			System.out.println("Main Menu");
 			System.out.println("********************");
-			
 			System.out.println("Press 1 to Create Profile");
 			System.out.println("Press 2 to Delete Profile");
 			System.out.println("Press 3 to View Profile");
@@ -53,7 +52,7 @@ public class VishnuView {
 					break;
 				
 				case 6:
-					vc.editController();
+					vc.editProfileController();
 					break;
 				
 				default:

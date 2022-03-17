@@ -38,11 +38,19 @@ public class VishnuService implements VishnuServiceInterface {
 		return i;
 	}
 
-	@Override
+	
 	public List<VishnuUser> searchProfileService(VishnuUser vu) {
 
 		List<VishnuUser> i = vd.searchProfileDAO(vu);
 		return i;
+	}
+
+	
+	public int editProfileService(VishnuUser vu) {
+		
+		int i = vd.editProfileDAO(vu);
+		return i;
+		
 	}
 
 }
