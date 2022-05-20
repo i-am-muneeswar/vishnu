@@ -1,10 +1,10 @@
 package com.vishnu.controller;
 
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import com.vishnu.entity.VishnuUser;
 import com.vishnu.service.VishnuServiceInterface;
+import com.vishnu.sort.SortByName;
 import com.vishnu.utility.ServiceFactory;
 
 public class VishnuController implements VishnuControllerInterface {
@@ -116,6 +116,20 @@ public class VishnuController implements VishnuControllerInterface {
 			System.out.println("**********");
 			
 		}*/
+		
+		ll.forEach(p->{
+			
+			System.out.println("**********");
+			System.out.println("Name is "+p.getName());
+			System.out.println("Password is "+p.getPassword());
+			System.out.println("Email is "+p.getEmail());
+			System.out.println("Address is "+p.getAddress());
+			System.out.println("**********");
+			
+		});
+		
+		Collections.sort(ll,new SortByName());
+		System.out.println("After Sorting");
 		
 		ll.forEach(p->{
 			
